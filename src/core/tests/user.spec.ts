@@ -17,7 +17,7 @@ describe("User use case", () => {
     const userData = mockedUsers[3];
     const { email, password } = userData;
 
-    const res = await user.getAuthenticatedUser(email, password);
+    const res = await user.authenticate(email, password);
 
     expect(res).toEqual(userData);
   });
@@ -27,7 +27,7 @@ describe("User use case", () => {
     const email = "invalidEmail";
     const password = "invalidPassword";
 
-    const res = await user.getAuthenticatedUser(email, password);
+    const res = await user.authenticate(email, password);
 
     expect(res).toEqual(errorDictinoray.userErros.invalidEmail);
   });
@@ -37,7 +37,7 @@ describe("User use case", () => {
     const { email } = userData;
     const password = "invalidPassword";
 
-    const res = await user.getAuthenticatedUser(email, password);
+    const res = await user.authenticate(email, password);
 
     expect(res).toEqual(errorDictinoray.userErros.invalidPassword);
   });

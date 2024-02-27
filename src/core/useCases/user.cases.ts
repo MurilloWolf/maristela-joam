@@ -8,10 +8,7 @@ export default class UserCases {
     this.userRepository = userRepository;
   }
 
-  async getAuthenticatedUser(
-    email: string,
-    password: string
-  ): Promise<IUser | Error> {
+  async authenticate(email: string, password: string): Promise<IUser | Error> {
     const user = await this.userRepository.findByEmail(email);
 
     if (typeof user === "object" && user instanceof Error) {
@@ -24,6 +21,7 @@ export default class UserCases {
     return user;
   }
 
+  // this is not a user case beacuse the user is not explicit doing this action
   async getUserAuthType(email: string): Promise<AuthType | Error> {
     const user = await this.userRepository.findByEmail(email);
     if (typeof user === "object" && user instanceof Error) {
