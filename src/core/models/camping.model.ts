@@ -1,13 +1,18 @@
 import { IInscription } from "./inscription.model";
 
+export type CapingStatus = "open" | "closed" | "finished" | string;
 export interface ICamping {
-  id: number;
+  id: string;
   number: number;
   year: number;
-
-  inscriptions: IInscription[];
-  inscriptionStartDate: Date;
-  inscriptionEndDate: Date;
+  statusWorkTeam: CapingStatus;
+  statusCamper: CapingStatus;
+  inscriptionsWorkTeam: IInscription[];
+  inscriptionCamper: IInscription[];
+  inscriptionCamperStartDate: Date;
+  inscriptionCamperEndDate: Date;
+  inscriptionWorkTeamStartDate: Date;
+  inscriptionWorkTeamEndDate: Date;
   campingStartDate: Date;
   campingEndDate: Date;
 }

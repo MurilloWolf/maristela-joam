@@ -12,6 +12,11 @@ const config: Config = {
   testEnvironment: "jsdom",
   collectCoverage: true,
   collectCoverageFrom: ["src/core/**/*.{ts,tsx}"],
+  coveragePathIgnorePatterns: [
+    "/node_modules/",
+    "/coverage/",
+    "\\.model\\.ts$",
+  ],
   // Add more setup options before each test is run
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 };

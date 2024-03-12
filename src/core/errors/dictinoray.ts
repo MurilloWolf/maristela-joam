@@ -1,8 +1,11 @@
-import { userErrors } from "./users.erros";
-
+import { userErrors } from "./users.errors";
+import { campingErrors } from "./camping.errors";
 const errorDictinoray = {
   userErros: {
     ...userErrors,
+  },
+  campingErrors: {
+    ...campingErrors,
   },
 };
 

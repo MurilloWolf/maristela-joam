@@ -3,7 +3,11 @@ import { IUserRepository } from "@/core/repository/user.repository";
 import users from "@/core/db/user.table";
 
 export default class InMemoryUserRepository implements IUserRepository {
-  private users: IUser[] = users;
+  private users: IUser[];
+
+  constructor(users: IUser[] = []) {
+    this.users = users;
+  }
 
   create(user: IUser): Promise<IUser> {
     return new Promise((resolve) => {
