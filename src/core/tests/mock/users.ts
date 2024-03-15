@@ -18,7 +18,7 @@ export const mockedUsers: IUser[] = [
     name: "Murillo Wolf",
     email: "murillo.wolf@example.com",
     password: "password2",
-    document: "987654321",
+    document: "999999999",
     gender: "male",
     auth: "developer",
     birthdate: new Date("1985-12-30"),

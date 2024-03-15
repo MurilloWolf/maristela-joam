@@ -15,4 +15,6 @@ export interface ICamping {
   inscriptionWorkTeamEndDate: Date;
   campingStartDate: Date;
   campingEndDate: Date;
+  created_at: Date;
+  updated_at: Date | null;
 }

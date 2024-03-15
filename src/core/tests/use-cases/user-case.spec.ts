@@ -1,7 +1,7 @@
-import UserCases from "../useCases/user.cases";
-import InMemoryUserRepository from "../infra/memory/user";
-import { mockedUsers } from "./mock/users";
-import errorDictinoray from "../errors/dictinoray";
+import UserCases from "../../useCases/user.cases";
+import InMemoryUserRepository from "../../infra/memory/user";
+import { mockedUsers } from "../mock/users";
+import errorDictinoray from "../../errors/dictinoray";
 
 function setup() {
   const user = new UserCases(new InMemoryUserRepository());

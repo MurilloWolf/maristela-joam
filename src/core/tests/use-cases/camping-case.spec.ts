@@ -1,9 +1,9 @@
 import exp from "constants";
-import InMemoryCampingRepository from "../infra/memory/camping";
-import CampingCases from "../useCases/camping.cases";
-import mockedCamping from "./mock/camping";
-import { ICamping } from "../models/camping.model";
-import errorDictinoray from "../errors/dictinoray";
+import InMemoryCampingRepository from "../../infra/memory/camping";
+import CampingCases from "../../useCases/camping.cases";
+import mockedCamping from "../mock/camping";
+import { ICamping } from "../../models/camping.model";
+import errorDictinoray from "../../errors/dictinoray";
 
 function setup() {
   const camping = new CampingCases(new InMemoryCampingRepository());

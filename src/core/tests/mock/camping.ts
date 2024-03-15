@@ -17,6 +17,8 @@ const mockedCamping: ICamping[] = [
     inscriptionWorkTeamEndDate: new Date("06/01/2023"),
     campingStartDate: new Date("07/04/2023"),
     campingEndDate: new Date("07/07/2023"),
+    created_at: new Date("01/01/2023"),
+    updated_at: new Date("02/01/2023"),
   },
   {
     id: "2",
@@ -32,6 +34,8 @@ const mockedCamping: ICamping[] = [
     inscriptionWorkTeamEndDate: new Date("06/01/2024"),
     campingStartDate: new Date("07/04/2024"),
     campingEndDate: new Date("07/07/2024"),
+    created_at: new Date("01/01/2024"),
+    updated_at: null,
   },
 ];
 

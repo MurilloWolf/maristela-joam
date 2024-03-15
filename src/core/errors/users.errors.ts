@@ -3,4 +3,5 @@ export const userErrors = {
   userNotCreated: new Error("User not created"),
   invalidEmail: new Error("Invalid email"),
   invalidPassword: new Error("Invalid password"),
+  noUserWithThisDocument: new Error("No user with this document"),
 };

@@ -1,5 +1,5 @@
-export type AuthType = "developer" | "admin" | "user";
-export type GenderType = "male" | "female";
+export type AuthType = "developer" | "admin" | "user" | string;
+export type GenderType = "male" | "female" | string;
 
 export interface IUser {
   id: string;
@@ -8,7 +8,6 @@ export interface IUser {
   password: string;
   document: string;
   gender: GenderType;
-
   auth: AuthType;
   birthdate: Date;
   created_at: Date;
